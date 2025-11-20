@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSMT - Mumbai</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      background: #f7f7f7;
+      color: #333;
+    }
+
+    /* Back Button */
+    .back-btn {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background: rgba(0,0,0,0.7);
+      color: white;
+      padding: 10px 18px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-size: 14px;
+      transition: background 0.3s;
+      z-index: 1000;
+    }
+
+    .back-btn:hover {
+      background: #ff9800;
+    }
+
+    /* Header / Hero Section */
+    header {
+      position: relative;
+      height: 95vh;
+      overflow: hidden;
+    }
+
+    header img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(70%);
+    }
+
+    .hero-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: white;
+    }
+
+    .hero-text h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      animation: fadeInDown 1.5s ease;
+    }
+
+    .hero-text p {
+      font-size: 1.2rem;
+      animation: fadeInUp 1.5s ease;
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translate(-50%, -70%); }
+      to { opacity: 1; transform: translate(-50%, -50%); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translate(-50%, -30%); }
+      to { opacity: 1; transform: translate(-50%, -50%); }
+    }
+
+    /* Container */
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    section {
+      margin-bottom: 60px;
+    }
+
+    h2 {
+      margin-bottom: 15px;
+      color: #222;
+      font-size: 2rem;
+      border-left: 5px solid #ff9800;
+      padding-left: 10px;
+    }
+
+    p {
+      margin-bottom: 15px;
+      color: #262323;
+    }
+
+    /* Highlight */
+    .highlight {
+      background: #fff3cd;
+      padding: 15px;
+      border-left: 5px solid #ff9800;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+
+    /* Info list */
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    ul li {
+      background: #fff;
+      margin: 10px 0;
+      padding: 12px 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+
+    ul li:hover {
+      transform: translateX(5px);
+    }
+
+    /* Map Section */
+    iframe {
+      width: 100%;
+      height: 400px;
+      border: none;
+      border-radius: 10px;
+    }
+
+    /* Footer */
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero-text h1 {
+        font-size: 2rem;
+      }
+      .hero-text p {
+        font-size: 1rem;
+      }
+      .back-btn {
+        font-size: 12px;
+        padding: 8px 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <header>
+    <!-- Back Button -->
+    <a href="homepage.html" class="back-btn">← Back</a>
+
+    <img src="csmt.jpg" alt="CSMT Mumbai">
+    <div class="hero-text">
+      <h1>Chhatrapati Shivaji Maharaj Terminus</h1>
+      <p>UNESCO World Heritage Railway Station</p>
+    </div>
+  </header>
+
+  <!-- About -->
+  <div class="container">
+    <section>
+      <h2>About CSMT</h2>
+      <p>
+        Chhatrapati Shivaji Maharaj Terminus (CSMT), formerly known as Victoria Terminus, is one of Mumbai’s most iconic landmarks and a UNESCO World Heritage Site. Built in 1887 during the British colonial period, this architectural marvel is designed in the Victorian Gothic Revival style with a blend of Indian elements. 
+        It serves as the headquarters of the Central Railways and is one of the busiest railway stations in India.
+      </p>
+      <div class="highlight">
+        🚉 <strong>Fun Fact:</strong> CSMT handles over 3 million passengers every day!
+      </div>
+    </section>
+
+    <!-- Things to Do -->
+    <section>
+      <h2>Things to Do</h2>
+      <ul>
+        <li>Admire the stunning Gothic architecture and intricate carvings.</li>
+        <li>Visit the heritage gallery inside the station.</li>
+        <li>Experience the hustle of Mumbai locals commuting daily.</li>
+        <li>Explore nearby attractions like Crawford Market and Marine Drive.</li>
+        <li>Capture photographs of this world-famous monument.</li>
+      </ul>
+    </section>
+
+    <!-- How to Reach -->
+    <section>
+      <h2>How to Reach 🚆</h2>
+      <p>CSMT is a major hub in Mumbai and is easily accessible from all parts of the city:</p>
+      <ul>
+        <li><strong>Central Line:</strong> Trains terminate at <b>CSMT</b>.</li>
+        <li><strong>Harbour Line:</strong> Direct connectivity to <b>CSMT</b>.</li>
+        <li><strong>Western Line:</strong> Take a train to <b>Churchgate</b> and then taxi/auto to CSMT (10–15 mins).</li>
+      </ul>
+    </section>
+
+    <!-- Map -->
+    <section>
+      <h2>Location Map</h2>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3772.343873813805!2d72.8346543749689!3d18.93984428224277!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7ce28e7eae8c7%3A0xcff6f7e3a75e5bbf!2sChhatrapati%20Shivaji%20Maharaj%20Terminus!5e0!3m2!1sen!2sin!4v1696511259987!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>contact us=930979****</p>
+  </footer>
+
+</body>
+</html>

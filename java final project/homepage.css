@@ -1,0 +1,284 @@
+* {
+  margin: 0;
+  padding: 0;
+  overflow-x: auto;
+}
+
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+  background-color: rgb(10, 10, 74);
+  color: white;
+  position: absolute;
+  /* Fix header at top */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+
+}
+
+.tabs {
+  display: flex;
+  list-style: none;
+}
+
+.tab {
+  padding: 9px 36px 0 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: rgb(243, 140, 37);
+}
+
+/* slider */
+.slides {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 92vh;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s ease-in-out;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  color:white;
+   font-family: "Caveat", cursive;
+  font-weight: 800;
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+
+/* .slides {
+    display: flex;
+    overflow:hidden;
+   
+}
+
+
+.slides::-webkit-scrollbar {
+    display: none;
+}
+
+.slide {
+    width: 100%;
+    height: 85vh;
+    flex-shrink: 0;
+    display: flex;
+    align-items:last baseline;
+    justify-content:first baseline;
+    
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+    font-weight: bold;
+
+     transition: transform 0.8s ease-in-out;
+}
+  */
+
+
+.slide1 {
+  background: url('Marine Drive.png') no-repeat center/cover;
+}
+
+.slide2 {
+  background: url('gateway of india2.jpg') no-repeat center/cover;
+}
+
+.slide3 {
+  background: url('bandra worli sealink.jpg') no-repeat center/cover;
+}
+
+.slide4 {
+  background: url('Goregaon.webp') no-repeat center/cover;
+}
+
+.slide5 {
+  background: url('elephantalead.webp') no-repeat center/cover;
+}
+
+.slide6 {
+  background: url('wankhede stadium.webp') no-repeat center/cover;
+}
+
+.slide7 {
+  background: url('south bombay.jpg') no-repeat center/cover;
+}
+
+.slide8 {
+  background: url('juhu beach.jpg') no-repeat center/cover;
+}
+
+.slide9 {
+  background: url('csmt.jpg') no-repeat center/cover;
+}
+
+.slide10 {
+  background: url('taj mahal palace.jpg') no-repeat center/cover;
+}
+
+.slide11 {
+  background: url('siddhivinayak temple.jpg') no-repeat center/cover;
+}
+
+.slide12 {
+  background: url('prince of wales museum.jpg') no-repeat center/cover;
+}
+
+.slide13 {
+  background: url('haji ali dargah.jpg') no-repeat center/cover;
+}
+
+
+
+
+
+
+/* about mumbai section */
+.about {
+  padding: 80px 20px;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.about-container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.about h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #0a0a4a;
+}
+
+.about p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+
+
+
+/* top 10 destinations in mumbai */
+.headline {
+  text-align: center;
+  padding: 80px 20px;
+  background: #fff;
+  /* keep simple, you can also put a bg image */
+}
+
+.headline h1 {
+  font-size: 3rem;
+  font-weight: 900;
+  color: rgba(100, 100, 100, 0.2);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: rgba(100, 100, 100, 0.7);
+  animation: wave 3s ease-in-out infinite;
+}
+
+@keyframes wave {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+
+
+/* css for card slider */
+.cardslider{
+margin-bottom: 80px;
+}
+.slider{
+  width:max-content;
+  display:flex;
+  overflow: hidden;
+  margin: 0px 30px 0px 30px;
+  /* position: relative; */
+
+}
+.cardslider::-webkit-scrollbar {
+    display: none;
+}
+.card{
+  background-color: rgb(2, 2, 2);
+  opacity:0.877;
+  height:350px;
+  width:240px;
+  margin:10px;
+  position:relative;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+position:relative;
+border:1.5px solid black
+}
+h2{
+  position:relative;
+   padding-bottom: 10px;
+  font-size: 25px;
+  font-weight: 600;
+  color:white;
+  z-index:1;
+}
+.card:hover{
+  border:2px solid black;
+  box-shadow:  black 5px 5px 10px;
+  opacity:1;
+}
+.card1{
+  background: url('card1 marine.jpg') no-repeat center/cover;
+}
+.card2{
+  background: url('card2 gateway.jpg') no-repeat center/cover;
+}
+.card3{
+  background: url('card3 siddhivinayak.jpg') no-repeat center/cover;
+}
+.card4{
+  background: url('card4 csmt.jpg') no-repeat center/cover;
+}
+.card5{
+  background: url('card5 haji ali dargah.jpg') no-repeat center/cover;
+}
+.card6{
+  background: url('card6 elephanta.jpg') no-repeat center/cover;
+}
+.card7{
+  background: url('card7 juhu beach.jpg') no-repeat center/cover;
+}
+.card8{
+  background: url('card8 sealink.jpg') no-repeat center/cover;
+}
+.card9{
+  background: url('card9 sgnp.jpg') no-repeat center/cover;
+}
+.card10{
+  background: url('card10 museum.jpg') no-repeat center/cover;
+}

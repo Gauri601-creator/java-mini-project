@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marine Drive - Mumbai</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      background: #f7f7f7;
+      color: #333;
+    }
+
+    /* Back Button */
+    .back-btn {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background: rgba(0,0,0,0.7);
+      color: white;
+      padding: 10px 18px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-size: 14px;
+      transition: background 0.3s;
+      z-index: 1000;
+    }
+
+    .back-btn:hover {
+      background: #ff9800;
+    }
+
+    /* Header / Hero Section */
+    header {
+      position: relative;
+      height: 95vh;
+      overflow: hidden;
+    }
+
+    header img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(70%);
+    }
+
+    .hero-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: white;
+    }
+
+    .hero-text h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      animation: fadeInDown 1.5s ease;
+    }
+
+    .hero-text p {
+      font-size: 1.2rem;
+      animation: fadeInUp 1.5s ease;
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translate(-50%, -70%); }
+      to { opacity: 1; transform: translate(-50%, -50%); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translate(-50%, -30%); }
+      to { opacity: 1; transform: translate(-50%, -50%); }
+    }
+
+    /* Container */
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    section {
+      margin-bottom: 60px;
+    }
+
+    h2 {
+      margin-bottom: 15px;
+      color: #222;
+      font-size: 2rem;
+      border-left: 5px solid #ff9800;
+      padding-left: 10px;
+    }
+
+    p {
+      margin-bottom: 15px;
+      color: #262323;
+    }
+
+    /* Highlight */
+    .highlight {
+      background: #fff3cd;
+      padding: 15px;
+      border-left: 5px solid #ff9800;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+
+    /* Info list */
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    ul li {
+      background: #fff;
+      margin: 10px 0;
+      padding: 12px 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+
+    ul li:hover {
+      transform: translateX(5px);
+    }
+
+    /* Gallery */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Map Section */
+    iframe {
+      width: 100%;
+      height: 400px;
+      border: none;
+      border-radius: 10px;
+    }
+
+    /* Footer */
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero-text h1 {
+        font-size: 2rem;
+      }
+      .hero-text p {
+        font-size: 1rem;
+      }
+      .back-btn {
+        font-size: 12px;
+        padding: 8px 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <header>
+    <!-- Back Button (goes back to previous page or home) -->
+    <a href="homepage.html" class="back-btn">← Back</a>
+
+    <img src="1marine.jpg" alt="Marine Drive Mumbai">
+    <div class="hero-text">
+      <h1>Marine Drive, Mumbai</h1>
+      <p>The Queen’s Necklace of India</p>
+    </div>
+  </header>
+
+  <!-- About -->
+  <div class="container">
+    <section>
+      <h2>About Marine Drive</h2>
+      <p>
+        Marine Drive is a 3.6 km long boulevard in South Mumbai along the Arabian Sea. Popularly called the "Queen’s Necklace", its glittering street lights resemble a necklace when viewed at night. It’s one of the most iconic landmarks of Mumbai where locals and tourists gather to enjoy sunsets, sea breeze, and the lively vibes of the city.
+      </p>
+      <div class="highlight">
+        🌅 <strong>Best time to visit:</strong> Evening hours to witness the magical sunset.
+      </div>
+    </section>
+
+    <!-- Things to Do -->
+    <section>
+      <h2>Things to Do</h2>
+      <ul>
+        <li>Relax and enjoy the Arabian Sea sunset.</li>
+        <li>Take a long walk or jog on the promenade.</li>
+        <li>Taste Mumbai’s street food like bhel puri and pav bhaji.</li>
+        <li>Visit Girgaon Chowpatty beach nearby.</li>
+        <li>Catch a cricket match at Wankhede Stadium.</li>
+      </ul>
+    </section>
+
+    <!-- How to Reach -->
+    <section>
+      <h2>How to Reach by Train 🚆</h2>
+      <p>Marine Drive is easily accessible through Mumbai’s local trains:</p>
+      <ul>
+        <li><strong>Western Line:</strong> Get down at <b>Churchgate Station</b> → 5-10 mins walk to Marine Drive.</li>
+        <li><strong>Central Line:</strong> Take a train to <b>CST Station</b> → short taxi/auto ride to Marine Drive.</li>
+        <li><strong>Harbour Line:</strong> Travel towards <b>CST</b> → switch to taxi/auto to reach Marine Drive.</li>
+      </ul>
+    </section>
+
+    <!-- Gallery -->
+    <section>
+      <h2>Photo Gallery</h2>
+      <div class="gallery">
+        <img src="1night.jpg" alt="Marine Drive Night">
+        <img src="1day.jpeg" alt="Marine Drive Daytime">
+        <img src="1necklace.jpg" alt="Queens Necklace Mumbai">
+      </div>
+    </section>
+
+    <!-- Map -->
+    <section>
+      <h2>Location Map</h2>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3772.290080464264!2d72.818130274969!3d18.943207582240582!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7ce1d44cf41f5%3A0x3bb3d9c5d0873ac2!2sMarine%20Drive!5e0!3m2!1sen!2sin!4v1696507745894!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>contact us=930979****</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bandra-Worli Sea Link - Mumbai</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      background: #f7f7f7;
+      color: #333;
+    }
+
+    /* Back Button */
+    .back-btn {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background: rgba(0,0,0,0.7);
+      color: white;
+      padding: 10px 18px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-size: 14px;
+      transition: background 0.3s;
+      z-index: 1000;
+    }
+
+    .back-btn:hover {
+      background: #ff9800;
+    }
+
+    /* Header / Hero Section */
+    header {
+      position: relative;
+      height: 95vh;
+      overflow: hidden;
+    }
+
+    header img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(70%);
+    }
+
+    .hero-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: white;
+    }
+
+    .hero-text h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      animation: fadeInDown 1.5s ease;
+    }
+
+    .hero-text p {
+      font-size: 1.2rem;
+      animation: fadeInUp 1.5s ease;
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translate(-50%, -70%); }
+      to { opacity: 1; transform: translate(-50%, -50%); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translate(-50%, -30%); }
+      to { opacity: 1; transform: translate(-50%, -50%); }
+    }
+
+    /* Container */
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    section {
+      margin-bottom: 60px;
+    }
+
+    h2 {
+      margin-bottom: 15px;
+      color: #222;
+      font-size: 2rem;
+      border-left: 5px solid #ff9800;
+      padding-left: 10px;
+    }
+
+    p {
+      margin-bottom: 15px;
+      color: #262323;
+    }
+
+    /* Highlight */
+    .highlight {
+      background: #fff3cd;
+      padding: 15px;
+      border-left: 5px solid #ff9800;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+
+    /* Info list */
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    ul li {
+      background: #fff;
+      margin: 10px 0;
+      padding: 12px 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+
+    ul li:hover {
+      transform: translateX(5px);
+    }
+
+    /* Map Section */
+    iframe {
+      width: 100%;
+      height: 400px;
+      border: none;
+      border-radius: 10px;
+    }
+
+    /* Footer */
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero-text h1 {
+        font-size: 2rem;
+      }
+      .hero-text p {
+        font-size: 1rem;
+      }
+      .back-btn {
+        font-size: 12px;
+        padding: 8px 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <header>
+    <!-- Back Button -->
+    <a href="homepage.html" class="back-btn">← Back</a>
+
+    <img src="bandra worli sealink.jpg" alt="Bandra-Worli Sea Link Mumbai">
+    <div class="hero-text">
+      <h1>Bandra-Worli Sea Link</h1>
+      <p>Mumbai’s Iconic Cable-Stayed Bridge</p>
+    </div>
+  </header>
+
+  <!-- About -->
+  <div class="container">
+    <section>
+      <h2>About Bandra-Worli Sea Link</h2>
+      <p>
+        The Bandra-Worli Sea Link is a cable-stayed bridge that connects Bandra in the Western Suburbs of Mumbai to Worli in South Mumbai. Opened in 2009, it is an engineering marvel and a major traffic artery, reducing travel time across the Arabian Sea from 60–90 minutes to about 20 minutes. It has become an iconic landmark and a symbol of modern Mumbai.
+      </p>
+      <div class="highlight">
+        🌉 <strong>Best time to visit:</strong> Evening for stunning sunset views over the Arabian Sea.
+      </div>
+    </section>
+
+    <!-- Things to Do -->
+    <section>
+      <h2>Things to Do</h2>
+      <ul>
+        <li>Drive across the bridge to experience the engineering marvel.</li>
+        <li>Take photographs of the bridge from Bandra or Worli coastline.</li>
+        <li>Watch sunset and enjoy the scenic views of the Arabian Sea.</li>
+        <li>Observe Mumbai skyline from the elevated bridge.</li>
+        <li>Go on a ferry nearby for alternative views of the bridge.</li>
+      </ul>
+    </section>
+
+    <!-- How to Reach -->
+    <section>
+      <h2>How to Reach 🚗</h2>
+      <p>The bridge is accessible via road from both Bandra and Worli:</p>
+      <ul>
+        <li>From Bandra: Take the Western Express Highway → Bandra end of Sea Link.</li>
+        <li>From Worli: Access via Worli Sea Face → connect to the bridge.</li>
+        <li>Nearest local train stations: <b>Bandra</b> (Western Line) and <b>Churchgate/Worli</b> (Western Line).</li>
+      </ul>
+    </section>
+
+    <!-- Map -->
+    <section>
+      <h2>Location Map</h2>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3772.727708578446!2d72.82046257496865!3d18.971108882245457!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7ce48b7eb4f93%3A0x41cbf4b4c88c1b02!2sBandra-Worli%20Sea%20Link!5e0!3m2!1sen!2sin!4v1696517300000!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>contact us=930979****</p>
+  </footer>
+
+</body>
+</html>

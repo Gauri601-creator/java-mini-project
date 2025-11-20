@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mumbai Travel</title>
+  <link rel="stylesheet" href="homepage.css">
+  <!-- font family -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Dancing+Script:wght@400..700&display=swap"
+    rel="stylesheet">
+  <style>
+    #feedbackTableContainer {
+      display: none; /* Hide table by default */
+      margin-top: 20px;
+    }
+
+    #showFeedbackBtn {
+      display: block;
+      margin: 20px auto;
+      padding: 12px 20px;
+      background: #0077cc;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    #showFeedbackBtn:hover {
+      background: #005fa3;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <div class="nav1">
+    <header class="nav">
+      <h1>Mumbai - The city of dreams</h1>
+      <ul class="tabs">
+        <a href="#destinations">
+          <li class="tab">Destinations</li>
+        </a>
+        <a href="#feedback">
+          <li class="tab">Feedback form</li>
+        </a>
+        <a href="#contactus">
+          <li class="tab">Contact us</li>
+        </a>
+      </ul>
+    </header>
+  </div>
+
+  <!-- Image Slider -->
+  <div class="slides">
+    <div class="slide slide1"><h1>Marine Drive</h1></div>
+    <div class="slide slide2"><h1>Gateway Of India</h1></div>
+    <div class="slide slide3"><h1>Bandra Worli Sea Link</h1></div>
+    <div class="slide slide4"><h1>Goregaon</h1></div>
+    <div class="slide slide5"><h1>Elephanta Caves</h1></div>
+    <div class="slide slide6"><h1>Wankhede Stadium</h1></div>
+    <div class="slide slide7"><h1>South Bombay</h1></div>
+    <div class="slide slide8"><h1>Juhu Beach</h1></div>
+    <div class="slide slide9"><h1>CSMT Mumbai</h1></div>
+    <div class="slide slide10"><h1>Taj Mahal Palace</h1></div>
+    <div class="slide slide11"><h1>Siddhivinayak Temple</h1></div>
+    <div class="slide slide12"><h1>Prince of wales Museum</h1></div>
+    <div class="slide slide13"><h1>Haji Ali Dargah</h1></div>
+  </div>
+
+  <script>
+    const slides = document.querySelectorAll(".slide");
+    let index = 0;
+    slides.forEach((slide, i) => slide.style.transform = `translateX(${i * 100}%)`);
+    function showSlide() {
+      index = (index + 1) % slides.length;
+      slides.forEach((slide, i) => slide.style.transform = `translateX(${(i - index) * 100}%)`);
+    }
+    setInterval(showSlide, 3000);
+  </script>
+
+  <!-- About Section -->
+  <section class="about">
+    <div class="about-container">
+      <h2>Mumbai the city that never sleeps</h2>
+      <p>
+        Mumbai, also known as the "City of Dreams", is India's financial, commercial, and entertainment capital.
+        Famous for its bustling lifestyle, iconic landmarks like the Gateway of India, Marine Drive, and Bollywood,
+        it attracts millions of tourists every year. From historic architecture to modern skyscrapers, beaches to
+        street food, Mumbai has a unique charm that blends tradition with modernity.
+      </p>
+    </div>
+  </section>
+
+  <!-- Destinations -->
+  <div id="destinations">
+    <section class="headline">
+      <h1>TOP 10 PLACES YOU CAN'T MISS IN MUMBAI</h1>
+    </section>
+    <section class="cardslider">
+      <div class="slider">
+        <a href="1marinedrive.html"><div class="card card1"><h2>Marine Drive</h2></div></a>
+        <a href="2gatewayofindia.html"><div class="card card2"><h2>Gateway Of India</h2></div></a>
+        <a href="3siddhivinayak.html"><div class="card card3"><h2>Siddhivinayak</h2></div></a>
+        <a href="4csmt.html"><div class="card card4"><h2>CSMT</h2></div></a>
+        <a href="5hajialidargah.html"><div class="card card5"><h2>Haji Ali Dargah</h2></div></a>
+        <a href="6elephanta.html"><div class="card card6"><h2>Elephanta Caves</h2></div></a>
+        <a href="7juhu.html"><div class="card card7"><h2>Juhu Beach</h2></div></a>
+        <a href="8bandraworli.html"><div class="card card8"><h2>Bandra Worli Sea Link</h2></div></a>
+        <a href="9sanjaygandhi.html"><div class="card card9"><h2>Sanjay Gandhi National Park</h2></div></a>
+        <a href="10prince.html"><div class="card card10"><h2>Prince Of Wales Museum</h2></div></a>
+      </div>
+    </section>
+  </div>
+
+  <!-- Feedback Section -->
+  <section id="feedback" style="padding:50px; background:#f9f9f9;">
+    <div style="max-width:800px; margin:auto;">
+      <h1 style="text-align:center; margin-bottom:20px; font-family:'Dancing Script', cursive; font-size:32px;">
+        Share Your Experience in Mumbai!
+      </h1>
+
+      <form id="feedbackForm" style="display:flex; flex-direction:column; max-width:500px; margin:auto; gap:15px;">
+        <input type="text" id="name" placeholder="Your Name" required style="padding:12px; border:1px solid #ccc; border-radius:8px;">
+        <input type="email" id="email" placeholder="Your Email" required style="padding:12px; border:1px solid #ccc; border-radius:8px;">
+        <input type="number" id="rating" placeholder="Rating (1-5)" min="1" max="5" required style="padding:12px; border:1px solid #ccc; border-radius:8px;">
+        <textarea id="message" placeholder="Write your feedback..." required rows="5" style="padding:12px; border:1px solid #ccc; border-radius:8px;"></textarea>
+        <button type="submit" style="background:#0077cc; color:white; padding:12px; border:none; border-radius:8px; cursor:pointer; font-size:16px;">
+          Submit
+        </button>
+      </form>
+
+      <!-- Button to show feedback -->
+      <button id="showFeedbackBtn">Show All Feedback</button>
+
+      <!-- Feedback Table -->
+      <div id="feedbackTableContainer">
+        <table id="feedbackTable" border="1" style="width:100%; border-collapse: collapse; margin-top:20px;">
+          <thead style="background:#f0f0f0;">
+            <tr>
+              <th style="padding:10px;">Name</th>
+              <th style="padding:10px;">Email</th>
+              <th style="padding:10px;">Rating</th>
+              <th style="padding:10px;">Message</th>
+            </tr>
+          </thead>
+          <tbody id="feedbackTableBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- JavaScript -->
+  <script>
+    const feedbackForm = document.getElementById("feedbackForm");
+    const feedbackTableBody = document.getElementById("feedbackTableBody");
+    const feedbackTableContainer = document.getElementById("feedbackTableContainer");
+    const showFeedbackBtn = document.getElementById("showFeedbackBtn");
+
+    feedbackForm.addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const feedback = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        rating: document.getElementById("rating").value,
+        message: document.getElementById("message").value
+      };
+
+      let feedbackList = JSON.parse(localStorage.getItem("feedbackList")) || [];
+      feedbackList.push(feedback);
+      localStorage.setItem("feedbackList", JSON.stringify(feedbackList));
+
+      feedbackForm.reset();
+      alert("✅ Feedback submitted successfully!");
+      loadFeedback();
+    });
+
+    function loadFeedback() {
+      const feedbackList = JSON.parse(localStorage.getItem("feedbackList")) || [];
+      feedbackTableBody.innerHTML = "";
+      feedbackList.forEach(fb => {
+        const row = document.createElement("tr");
+        row.innerHTML = `
+          <td style="padding:10px; border:1px solid #ccc;">${fb.name}</td>
+          <td style="padding:10px; border:1px solid #ccc;">${fb.email}</td>
+          <td style="padding:10px; border:1px solid #ccc; text-align:center;">⭐ ${fb.rating}</td>
+          <td style="padding:10px; border:1px solid #ccc;">${fb.message}</td>
+        `;
+        feedbackTableBody.appendChild(row);
+      });
+    }
+
+    // Show/hide feedback table on button click
+    showFeedbackBtn.addEventListener("click", function() {
+      feedbackTableContainer.style.display = "block";
+      loadFeedback();
+      showFeedbackBtn.style.display = "none"; // Hide button after clicking
+    });
+
+    window.onload = function() {
+      if (JSON.parse(localStorage.getItem("feedbackList"))?.length) {
+        showFeedbackBtn.style.display = "block";
+      }
+    };
+  </script>
+
+  <!-- Footer -->
+  <footer id="contactus" style="background:#222; color:white; padding:60px 20px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+    <div style="max-width:1200px; margin:auto; display:flex; flex-wrap:wrap; gap:40px; justify-content:space-between;">
+      <div style="flex:1; min-width:250px;">
+        <h2 style="color:#ff9800; margin-bottom:20px;">About SkillSwap Travels</h2>
+        <p style="line-height:1.6; color:#ccc;">
+          Explore the best of Mumbai with SkillSwap Travels. From iconic landmarks to hidden gems, we guide you to unforgettable experiences. Plan your journey with detailed info, travel tips, and local insights.
+        </p>
+      </div>
+      <div style="flex:1; min-width:200px;">
+        <h2 style="color:#ff9800; margin-bottom:20px;">Quick Links</h2>
+        <ul style="list-style:none; padding-left:0; color:#ccc; line-height:2;">
+          <li><a href="homepage.html" style="text-decoration:none; color:#ccc;">Home</a></li>
+          <li><a href="1marinedrive.html" style="text-decoration:none; color:#ccc;">Marine Drive</a></li>
+          <li><a href="2gatewayofindia.html" style="text-decoration:none; color:#ccc;">Gateway of India</a></li>
+          <li><a href="3siddhivinayak.html" style="text-decoration:none; color:#ccc;">Siddhivinayak Temple</a></li>
+          <li><a href="4csmt.html" style="text-decoration:none; color:#ccc;">CSMT</a></li>
+          <li><a href="5hajialidargah.html" style="text-decoration:none; color:#ccc;">Haji Ali Dargah</a></li>
+        </ul>
+      </div>
+      <div style="flex:1; min-width:250px;">
+        <h2 style="color:#ff9800; margin-bottom:20px;">Contact Us</h2>
+        <p style="color:#ccc; line-height:2;">
+          📞 Phone: +91 9309794157<br>+91 91758 47093<br>+91 84528 70036<br>+91 73040 61319<br>
+          ✉️ Email: info@aaplimumbai.com<br>
+          📍 Address: Datta Meghe College of Engineering Airoli, Mumbai, Maharashtra, India
+        </p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
